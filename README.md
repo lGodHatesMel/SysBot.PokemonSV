@@ -1,19 +1,14 @@
 # A custom SysBot.NET tradebot for Pokémon Scarlet/Violet
 ![License](https://img.shields.io/badge/License-AGPLv3-blue.svg)
 
-This is the trade bot running on my Twitch channel at [https://twitch.tv/berichandev/](https://twitch.tv/berichandev/)
-If all you want is to request Pokémon, please go there!
-
 This is a custom sysbot, the Scarlet/Violet functionality of this bot is not created or supported by the PKHeX developers, please do not pester them!
 [Read the official startup instructions](https://github.com/kwsch/SysBot.NET/wiki/Bot-Startup-Details) if you've never hosted a switch sysbot.
-
-[Download the latest build of this bot here](https://berichan.github.io/GetNHSE?sv)
 
 ## Support Discord:
 
 For support on setting up your own instance of this SysBot, feel free to join the discord! (This sysbot isn't supported by the PKHeX-Projects discord, please do not ask for help there or bother them with questions related to this bot.)
 
-[<img src="https://canary.discordapp.com/api/guilds/771477382409879602/widget.png?style=banner2">](https://discord.gg/berichan)
+[<img src="https://discordapp.com/api/guilds/916469484666093668/embed.png?style=banner2">](https://discord.gg/UPXbvs8N65)
 
 [sys-botbase](https://github.com/olliz0r/sys-botbase) client for remote control automation of Nintendo Switch consoles.
 
