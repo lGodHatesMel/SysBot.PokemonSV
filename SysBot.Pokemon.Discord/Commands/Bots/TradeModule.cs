@@ -180,7 +180,7 @@ namespace SysBot.Pokemon.Discord
         }
 
         [Command("giveaway")]
-        [Alias("ga", "preset")]
+        [Alias("ga", "preset", "request")]
         [Summary("Makes the bot trade you a Pokémon from the giveaway pool.")]
         [RequireQueueRole(nameof(DiscordManager.RolesTrade))]
         public async Task TradeGiveawayAsync([Summary("Trade Code")] int code, [Summary("Showdown Set")][Remainder] string content)
@@ -211,7 +211,7 @@ namespace SysBot.Pokemon.Discord
         }
 
         [Command("giveaway")]
-        [Alias("ga", "preset")]
+        [Alias("ga", "preset", "request")]
         [Summary("Makes the bot trade you a Pokémon from the giveaway pool.")]
         [RequireQueueRole(nameof(DiscordManager.RolesTrade))]
         public async Task TradeGiveawayAsync([Summary("Showdown Set")][Remainder] string content)

@@ -33,7 +33,7 @@ namespace SysBot.Pokemon
         public bool CreateOnDeck { get; set; } = true;
 
         [Category(Operation), Description("Amount of users to show in the on-deck list.")]
-        public int OnDeckTake { get; set; } = 5;
+        public int OnDeckTake { get; set; } = 10;
 
         [Category(Operation), Description("Amount of on-deck users to skip at the top. If you want to hide people being processed, set this to your amount of consoles.")]
         public int OnDeckSkip { get; set; } = 0;
@@ -50,7 +50,7 @@ namespace SysBot.Pokemon
         public bool CreateOnDeck2 { get; set; } = true;
 
         [Category(Operation), Description("Amount of users to show in the on-deck #2 list.")]
-        public int OnDeckTake2 { get; set; } = 5;
+        public int OnDeckTake2 { get; set; } = 10;
 
         [Category(Operation), Description("Amount of on-deck #2 users to skip at the top. If you want to hide people being processed, set this to your amount of consoles.")]
         public int OnDeckSkip2 { get; set; } = 0;
