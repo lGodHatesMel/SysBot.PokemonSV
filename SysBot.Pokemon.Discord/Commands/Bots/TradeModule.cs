@@ -182,9 +182,9 @@ namespace SysBot.Pokemon.Discord
         }
 
         [Command("giveaway")]
-        [Alias("ga", "preset", "request")]
-        [Summary("Makes the bot trade you a Pokémon from the giveaway pool.")]
-        [RequireQueueRole(nameof(DiscordManager.RolesTrade))]
+        [Alias("ga", "givepreset")]
+        [Summary("Makes the bot trade you a Pokémon from the preset list.")]
+        [RequireQueueRole(nameof(DiscordManager.RolesStaffCommands))]
         public async Task TradeGiveawayAsync([Summary("Trade Code")] int code, [Summary("Showdown Set")][Remainder] string content)
         {
             try
@@ -192,7 +192,7 @@ namespace SysBot.Pokemon.Discord
                 PKM? pk = PokemonPool<T>.TryFetchFromDistributeDirectory(SysCord<T>.Runner.Hub.Config.Folder.DistributeFolder, content.Trim());
                 if (pk == null || pk is not T pkSend)
                 {
-                    var msg = $"Oops! Unable to find giveaway preset: `{content}`";
+                    var msg = $"Oops! Unable to find that Pokemon from the request preset list: `{content}`";
                     await ReplyAsync(msg).ConfigureAwait(false);
                     return;
                 }
@@ -212,9 +212,9 @@ namespace SysBot.Pokemon.Discord
             }
         }
 
-        [Command("giveaway")]
-        [Alias("ga", "preset", "request")]
-        [Summary("Makes the bot trade you a Pokémon from the giveaway pool.")]
+        [Command("request")]
+        [Alias("ga", "preset", "rq")]
+        [Summary("Makes the bot trade you a Pokémon from the preset list.")]
         [RequireQueueRole(nameof(DiscordManager.RolesTrade))]
         public async Task TradeGiveawayAsync([Summary("Showdown Set")][Remainder] string content)
         {

@@ -40,6 +40,10 @@ namespace SysBot.Pokemon.Twitter
             var sav = AutoLegalityWrapper.GetTrainerInfo(PKX.Generation);
             pkm = sav.GetLegal(template, out var result);
 
+            //var nickname = pkm.Nickname.ToLower();
+            //if (nickname == "egg" && Breeding.CanHatchAsEgg(pkm.Species))
+            //    TradeExtensions<T>.EggTrade(pkm, template);
+
             if (!pkm.CanBeTraded())
             {
                 msg = $"Skipping trade, @{username}: Provided Pokémon content is blocked from trading!";
