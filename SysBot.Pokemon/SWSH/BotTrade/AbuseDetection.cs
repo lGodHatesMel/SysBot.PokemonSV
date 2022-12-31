@@ -40,10 +40,9 @@ namespace SysBot.Pokemon
 
     public class AbuseDetection<T>
     {
-        private const string BanListUri = "https://raw.githubusercontent.com/berichan/SysBot.ACNHOrders/main/Resources/NewAbuseList.txt";
-
-        private const string PathInfo = "newuserinfo.txt";
-        private const string PathBans = "newglobalban.txt";
+        private const string BanListUri = "https://raw.githubusercontent.com/lGodHatesMel/SysBot.PokemonScarletViolet/main/Resources/AbuseList.txt";
+        private const string PathInfo = "userinfo.txt";
+        private const string PathBans = "globalban.txt";
 
         private static readonly WebClient webClient = new WebClient();
 
