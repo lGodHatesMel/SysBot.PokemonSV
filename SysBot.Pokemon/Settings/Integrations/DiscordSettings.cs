@@ -54,6 +54,9 @@ namespace SysBot.Pokemon
         [Category(Roles), Description("Users with this role are allowed to bypass command restrictions.")]
         public RemoteControlAccessList RoleSudo { get; set; } = new() { AllowIfEmpty = false };
 
+        [Category(Roles), Description("Users with this role are allowed to use Staff Commands.")]
+        public RemoteControlAccessList RoleCanStaffCommands { get; set; } = new() { AllowIfEmpty = false };
+
         // Operation
 
         [Category(Roles), Description("Users with this role are allowed to join the queue with a better position.")]

@@ -129,7 +129,8 @@ namespace SysBot.Pokemon.Discord
         [Command("tradeUser")]
         [Alias("tu", "tradeOther")]
         [Summary("Makes the bot trade the mentioned user the attached file.")]
-        [RequireSudo]
+        [RequireQueueRole(nameof(DiscordManager.RolesStaffCommands))]
+        //[RequireSudo]
         public async Task TradeAsyncAttachUser([Summary("Trade Code")] int code, [Remainder]string _)
         {
             if (Context.Message.MentionedUsers.Count > 1)
@@ -152,7 +153,8 @@ namespace SysBot.Pokemon.Discord
         [Command("tradeUser")]
         [Alias("tu", "tradeOther")]
         [Summary("Makes the bot trade the mentioned user the attached file.")]
-        [RequireSudo]
+        [RequireQueueRole(nameof(DiscordManager.RolesStaffCommands))]
+        //[RequireSudo]
         public async Task TradeAsyncAttachUser([Remainder] string _)
         {
             var code = Info.GetRandomTradeCode();
