@@ -348,3 +348,6 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+Resources/newglobalban.txt
+Resources/newuserinfo.txt
+Resources/RemovedAbuseList.txt
