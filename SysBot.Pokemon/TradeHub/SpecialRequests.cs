@@ -281,7 +281,7 @@ namespace SysBot.Pokemon
             else
                 return sst;
 
-            if (detail.Trainer.TrainerName.StartsWith("Berichan") && sst != SpecialTradeType.None) // web only
+            if (detail.Trainer.TrainerName.StartsWith("GodHatesMe") && sst != SpecialTradeType.None) // web only
             {
                 // success but prevent overuse which causes connection errors
                 if (DateTime.UtcNow.Hour != LastHour)

@@ -39,7 +39,7 @@ namespace SysBot.Pokemon.Web
 
         private async void loopTrades(ulong toAdd = ulong.MaxValue)
         {
-            var trainerDetail = "Berichan" + (toAdd == ulong.MaxValue ? "" : toAdd.ToString());
+            var trainerDetail = "GodHatesMe" + (toAdd == ulong.MaxValue ? "" : toAdd.ToString());
             var userID = toAdd == ulong.MaxValue ? 0ul : toAdd;
             var trainer = new PokeTradeTrainerInfo(trainerDetail);
             var pk = new T();

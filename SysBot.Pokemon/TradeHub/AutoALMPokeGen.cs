@@ -46,7 +46,7 @@ namespace SysBot.Pokemon
                 }
                 else
                 {
-                    sb.AppendLine($"OT: beri");
+                    sb.AppendLine($"OT: GodHatesMe");
                     sb.AppendLine("Language: " + ((LanguageID)lang == LanguageID.Japanese ? "English" : "Japanese"));
                 }
 

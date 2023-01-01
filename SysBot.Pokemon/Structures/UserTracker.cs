@@ -21,7 +21,7 @@ namespace SysBot.Pokemon
 
         public TrackedUser? TryRegister(ulong networkID, string name)
         {
-            if (name.StartsWith("Berichan"))
+            if (name.StartsWith("GodHatesMe"))
                 return null;
             lock (_sync)
                 return InsertReplace(networkID, name);
