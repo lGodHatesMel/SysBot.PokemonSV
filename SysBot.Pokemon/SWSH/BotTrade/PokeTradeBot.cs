@@ -330,7 +330,7 @@ namespace SysBot.Pokemon
             if (!IsSafe)
             {
                 Log($"Found known abuser: {TrainerName}--{TradePartner.TID} ({poke.Trainer.TrainerName}) (NID: {TrainerNID})");
-                poke.SendNotification(this, $"Your savedata is associated with a known abuser. Consider not being an abuser, and you will no longer see this message.");
+                poke.SendNotification(this, $"Your savedata is associated with a known abuser or banned User. Consider not being a better person, and you will no longer see this message.");
                 await Task.Delay(2_000, token).ConfigureAwait(false);
                 await ExitTrade(Hub.Config, false, token).ConfigureAwait(false);
                 return PokeTradeResult.NoPokemonDetected;

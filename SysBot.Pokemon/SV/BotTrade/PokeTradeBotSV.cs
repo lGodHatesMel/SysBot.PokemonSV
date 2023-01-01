@@ -470,7 +470,7 @@ namespace SysBot.Pokemon
             if ((!IsSafe && !AbuseSettings.AllowGloballyBlacklistedAccounts) || (multi && AbuseSettings.AllowMultiAccountUse))
             {
                 Log($"Found known abuser: {tradePartner.TrainerName}-{tradePartner.SID}-{tradePartner.TID} ({poke.Trainer.TrainerName}) (NID: {tradePartnerNID}) origin: {poke.Notifier.IdentifierLocator}");
-                poke.SendNotification(this, $"Your savedata is associated with a known abuser. Consider not being an abuser, and you will no longer see this message.");
+                poke.SendNotification(this, $"Your savedata is associated with a known abuser or banned User. Consider not being a better person, and you will no longer see this message.");
                 return PokeTradeResult.SuspiciousActivity;
             }
 
