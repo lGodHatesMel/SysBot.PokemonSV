@@ -12,7 +12,10 @@ namespace SysBot.Pokemon
         public static IReadOnlyList<ulong> Users { get; } = new ulong[]
         {
             17966876822808517034,
-            
+            15519648569467555184,
+            15108690203704459588,
+            15108690203704459588,
+            9785186464643638297,
         };
     }
 }
