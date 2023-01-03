@@ -17,13 +17,13 @@ namespace SysBot.Pokemon.Twitch
 
             if (!TwitchBot<T>.Info.GetCanQueue() || !TwitchBot<T>.CanQueueTwitch)
             {
-                msg = "Sorry, I am not currently accepting queue requests!";
+                msg = "Sorry, I am not currently accepting queue requests! Please Wait for the Bot to restart.";
                 return false;
             }
 
             if (string.IsNullOrWhiteSpace(setstring))
             {
-                msg = $"@{username}: You need to request something! Include the Pokémon name in your command.";
+                msg = $"@{username}: You need to request something! Include the Pokï¿½mon name in your command.";
                 return false;
             }
 
@@ -59,13 +59,13 @@ namespace SysBot.Pokemon.Twitch
 
                 if (pkm == null)
                 {
-                    msg = $"Skipping trade, @{username}: Unable to legalize the Pokémon.";
+                    msg = $"Skipping trade, @{username}: Unable to legalize the Pokï¿½mon.";
                     return false;
                 }
 
                 if (!pkm.CanBeTraded())
                 {
-                    msg = $"Skipping trade, @{username}: Provided Pokémon content is blocked from trading!";
+                    msg = $"Skipping trade, @{username}: Provided Pokï¿½mon content is blocked from trading!";
                     return false;
                 }
 
@@ -83,7 +83,7 @@ namespace SysBot.Pokemon.Twitch
                     }
                 }
 
-                var reason = result == "Timeout" ? "Set took too long to generate." : "Unable to legalize the Pokémon.";
+                var reason = result == "Timeout" ? "Set took too long to generate." : "Unable to legalize the Pokï¿½mon.";
                 msg = $"Skipping trade, @{username}: {reason}";
             }
 #pragma warning disable CA1031 // Do not catch general exception types

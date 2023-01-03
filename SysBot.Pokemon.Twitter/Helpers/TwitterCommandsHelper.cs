@@ -14,7 +14,7 @@ namespace SysBot.Pokemon.Twitter
 
             if (!TwitterBot.Info.GetCanQueue())
             {
-                msg = "Sorry, I am not currently accepting queue requests!";
+                msg = "Sorry, I am not currently accepting queue requests! Please Wait for the Bot to restart.";
                 return false;
             }
 
@@ -39,10 +39,6 @@ namespace SysBot.Pokemon.Twitter
 
             var sav = AutoLegalityWrapper.GetTrainerInfo(PKX.Generation);
             pkm = sav.GetLegal(template, out var result);
-
-            //var nickname = pkm.Nickname.ToLower();
-            //if (nickname == "egg" && Breeding.CanHatchAsEgg(pkm.Species))
-            //    TradeExtensions<T>.EggTrade(pkm, template);
 
             if (!pkm.CanBeTraded())
             {
