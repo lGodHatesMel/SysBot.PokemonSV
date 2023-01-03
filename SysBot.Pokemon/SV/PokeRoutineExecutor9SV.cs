@@ -11,7 +11,7 @@ using static SysBot.Pokemon.PokeDataOffsetsSV;
 
 namespace SysBot.Pokemon
 {
-    public abstract class PokeRoutineExecutor9 : PokeRoutineExecutor<PK9>
+    public abstract class PokeRoutineExecutor9SV : PokeRoutineExecutor<PK9>
     {
         protected const int HidWaitTime = 46;
         protected const int KeyboardPressTime = 20;
@@ -19,7 +19,7 @@ namespace SysBot.Pokemon
         protected uint PokePortalLoadedValue = 0xA;
         protected TrainerIDBlock OurTrainer = new TrainerIDBlock();
 
-        protected PokeRoutineExecutor9(PokeBotState cfg) : base(cfg)
+        protected PokeRoutineExecutor9SV(PokeBotState cfg) : base(cfg)
         {
 
         }

@@ -15,7 +15,7 @@ using static SysBot.Pokemon.SpecialRequests;
 
 namespace SysBot.Pokemon
 {
-    public class PokeTradeBotSV : PokeRoutineExecutor9, ICountBot
+    public class PokeTradeBotSV : PokeRoutineExecutor9SV, ICountBot
     {
         private readonly PokeTradeHub<PK9> Hub;
         private readonly TradeSettings TradeSettings;
