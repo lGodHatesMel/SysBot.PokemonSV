@@ -535,6 +535,15 @@ namespace SysBot.Pokemon
 
                 ctr++;
                 var msg = Hub.Config.Trade.DumpTradeLegalityCheck ? verbose: $"File {ctr}";
+                
+                var ot = pk.OT_Name;
+                var ot_gender = pk.OT_Gender == 0 ? "Male" : "Female";
+                var tid = pk.GetDisplayTID().ToString(pk.GetTrainerIDFormat().GetTrainerIDFormatStringTID());
+                var sid = pk.GetDisplaySID().ToString(pk.GetTrainerIDFormat().GetTrainerIDFormatStringSID());
+                msg += $"\n**Trainer Data**\n```OT: {ot}\nOTGender: {ot_gender}\nTID: {tid}\nSID: {sid}```";
+
+                var eggstring = pk.IsEgg ? "Egg " : string.Empty;
+                msg += pk.IsShiny ? $"\n**This Pokémon {eggstring}is shiny!**" : string.Empty;
                 detail.SendNotification(this, pk, msg);
             }
 
