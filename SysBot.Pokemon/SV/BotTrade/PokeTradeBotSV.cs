@@ -748,7 +748,7 @@ namespace SysBot.Pokemon
             }
 
             // Inject the shown Pokémon.
-            var clone = (PK9)offered.Clone();
+            var clone = offered.Clone();
             if (Hub.Config.Legality.ResetHOMETracker)
                 clone.Tracker = 0;
 
