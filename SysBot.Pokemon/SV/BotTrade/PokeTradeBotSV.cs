@@ -403,7 +403,7 @@ namespace SysBot.Pokemon
         private async Task<PokeTradeResult> PerformLinkCodeTrade(SAV9SV sav, PokeTradeDetail<PK9> poke, CancellationToken token)
         {
             if (poke.Type == PokeTradeType.Random)
-                SetText(sav, $"Random Distibution\nCode: {poke.Code:0000 0000}\r\nSending: {(Species)poke.TradeData.Species}{(poke.TradeData.IsEgg ? " (Egg)" : string.Empty)}");
+                SetText(sav, $"Random Distribution\nLink Code: {poke.Code:0000 0000}\r\nTrading: {(Species)poke.TradeData.Species}{(poke.TradeData.IsEgg ? " Egg" : string.Empty)}");
             else
                 if (TradeSettings.UseTradeMsg)
                 {
