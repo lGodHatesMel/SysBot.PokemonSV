@@ -17,6 +17,12 @@ namespace SysBot.Pokemon
         [Category(TradeConfig), Description("Time to wait for a trade partner in seconds.")]
         public int TradeWaitTime { get; set; } = 35;
 
+        [Category(TradeConfig), Description("If set to True, the text file will say the message you added to the `SubMsg` setting.")]
+        public bool UseTradeMsg { get; set; } = true;
+
+        [Category(TradeConfig), Description("If using The `SubOnlyTrade` Option then add your message text here.")]
+        public string TradeMsg { get; set; } = "";
+
         [Category(TradeCode), Description("Minimum Link Code.")]
         public int MinTradeCode { get; set; } = 8180;
 
