@@ -405,14 +405,9 @@ namespace SysBot.Pokemon
             if (poke.Type == PokeTradeType.Random)
                 SetText(sav, $"Random Distribution\nLink Code: {poke.Code:0000 0000}\r\nTrading: {(Species)poke.TradeData.Species}{(poke.TradeData.IsEgg ? " Egg" : string.Empty)}");
             else
-                if (TradeSettings.UseTradeMsg)
-                {
-                    SetText(sav, $"{TradeSettings.TradeMsg}");
-                }
-                else
-                {
-                    SetText(sav, "Request Trade");
-                }
+            {
+                SetText(sav, TradeSettings.UseTradeMsg ? $"{TradeSettings.TradeMsg}" : "Request Trade");
+            }
 
             UpdateBarrier(poke.IsSynchronized);
             poke.TradeInitialize(this);
