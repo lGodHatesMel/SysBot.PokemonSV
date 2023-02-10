@@ -115,7 +115,7 @@ namespace SysBot.Pokemon
                         return;
                     }
 
-                    using (var fs = new FileStream(PathBans, FileMode.CreateNew))
+                    using (var fs = new FileStream(PathBans, FileMode.Create))
                     {
                         var ResponseTask = GetTask.Result.Content.CopyToAsync(fs);
                         ResponseTask.Wait(3_000);
