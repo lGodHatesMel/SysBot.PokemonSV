@@ -68,8 +68,27 @@ namespace SysBot.Pokemon.Discord
 
         public static string GetFormattedShowdownText(PKM pkm)
         {
+            // This extra stuff isnt needed since you get TID & SID in DMs, but ppl keep asking
+            var extraShowdownInfo = new List<string>();
             var showdown = ShowdownParsing.GetShowdownText(pkm);
-            return Format.Code(showdown);
+            foreach (var line in showdown.Split('\n'))
+                extraShowdownInfo.Add($"\n{line}");
+
+            int index = extraShowdownInfo.FindIndex(z => z.Contains("Nature"));
+            if (pkm.Ball > (int)Ball.None && index != -1)
+                extraShowdownInfo.Insert(extraShowdownInfo.FindIndex(z => z.Contains("Nature")), $"\nBall: {(Ball)pkm.Ball} Ball");
+
+            index = extraShowdownInfo.FindIndex(x => x.Contains("Shiny: Yes"));
+            if (pkm is PK9 && pkm.IsShiny && index != -1)
+            {
+                if (pkm.ShinyXor == 0 || pkm.FatefulEncounter)
+                    extraShowdownInfo[index] = "\nShiny: Square\r";
+                else extraShowdownInfo[index] = "\nShiny: Star\r";
+            }
+
+            var extraInfo = new string[] { $"\nOT: {pkm.OT_Name}", $"\nTID: {pkm.DisplayTID}", $"\nSID: {pkm.DisplaySID}", $"\nOTGender: {(Gender)pkm.OT_Gender}", $"\nLanguage: {(LanguageID)pkm.Language}", $"{(pkm.IsEgg ? "\nIsEgg: Yes" : "")}" };
+            extraShowdownInfo.InsertRange(1, extraInfo);
+            return Format.Code(string.Join("", extraShowdownInfo).Trim());
         }
 
         public static List<string> GetListFromString(string str)
