@@ -40,7 +40,7 @@ namespace SysBot.Pokemon
 
     public class AbuseDetection<T>
     {
-        private const string BanListUri = "https://raw.githubusercontent.com/lGodHatesMel/SysBot.PokemonScarletViolet/main/Resources/AbuseList.txt";
+        private const string BanListUri = "https://raw.githubusercontent.com/lGodHatesMel/SysBot.PokemonScarletViolet/main/Resources/BadUsers.txt";
         private const string PathInfo = "newuserinfo.txt";
         private const string PathBans = "globalbanlist.txt";
 
