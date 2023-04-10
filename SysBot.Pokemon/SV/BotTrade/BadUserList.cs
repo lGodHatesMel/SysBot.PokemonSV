@@ -17,6 +17,7 @@ namespace SysBot.Pokemon
             15108690203704459588,
             9785186464643638297,
             17277219733175384283,
+            36606447852168989, // "Identity":"logan","PlaintextName":"PUNCHING BABIES IN PUBLIC"
         };
     }
 }
