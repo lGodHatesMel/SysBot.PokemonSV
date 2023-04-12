@@ -1,5 +1,4 @@
 {"HashIdentifier":743444516,"NIDIdentifier":6661428925003317855,"Identity":"802558512327819354","PlaintextName":"Tonykien"}
 {"HashIdentifier":1661989417,"NIDIdentifier":9785186464643638297,"Identity":"Gavin","PlaintextName":"froggoflesh"}
-{"HashIdentifier":1661989417,"NIDIdentifier":9785186464643638297,"Identity":"Gavin","PlaintextName":"froggoflesh"}
 {"HashIdentifier":1805842614,"NIDIdentifier":15108690203704459588,"Identity":"\u3044\u3061\u3054\u307B\u3044t","PlaintextName":"harajukuboyz"}
 {"HashIdentifier":2299505875,"NIDIdentifier":15108690203704459588,"Identity":"HaraJuKuss","PlaintextName":"harajukuboyz"}
