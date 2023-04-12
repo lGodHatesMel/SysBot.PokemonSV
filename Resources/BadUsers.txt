@@ -1,4 +1,3 @@
-{"HashIdentifier":4176408767,"NIDIdentifier":36606447852168989,"Identity":"logan","PlaintextName":"PUNCHING BABIES IN PUBLIC"}
 {"HashIdentifier":743444516,"NIDIdentifier":6661428925003317855,"Identity":"802558512327819354","PlaintextName":"Tonykien"}
 {"HashIdentifier":1661989417,"NIDIdentifier":9785186464643638297,"Identity":"Gavin","PlaintextName":"froggoflesh"}
 {"HashIdentifier":1661989417,"NIDIdentifier":9785186464643638297,"Identity":"Gavin","PlaintextName":"froggoflesh"}
