@@ -531,7 +531,6 @@ namespace SysBot.Pokemon
                 if (itemReq != SpecialTradeType.None)
                 {
                     poke.SendNotification(this, "SSRYour request isn't legal. Please try a different Pokémon or request.");
-                    if (!string.IsNullOrWhiteSpace(Hub.Config.Web.URIEndpoint))
                         AddToPlayerLimit(tradePartner.IDHash.ToString(), -1);
                 }
 
