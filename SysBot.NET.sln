@@ -23,10 +23,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SysBot.Pokemon.Z3", "SysBot
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SysBot.Pokemon.YouTube", "SysBot.Pokemon.YouTube\SysBot.Pokemon.YouTube.csproj", "{958D8B0C-FF01-4BC3-84AF-8BCB80794B49}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SysBot.Pokemon.Web", "SysBot.Pokemon.Web\SysBot.Pokemon.Web.csproj", "{B2B85D4A-0682-4FD1-9496-5DC094B8AC2D}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SysBot.Pokemon.Twitter", "SysBot.Pokemon.Twitter\SysBot.Pokemon.Twitter.csproj", "{5857AE6E-36F9-4A3C-9A20-06F93BD967E1}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
