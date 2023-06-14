@@ -10,7 +10,7 @@ namespace SysBot.Base
 {
     public static class LogUtil
     {
-        private static bool createLogFiles = false; // Set this to true or false based on your condition
+        private static bool createLogFiles = true; // Set this to true or false based on your condition
 
         static LogUtil()
         {
