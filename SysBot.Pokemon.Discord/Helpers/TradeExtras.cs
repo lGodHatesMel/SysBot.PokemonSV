@@ -1,15 +1,10 @@
-﻿using System;
-using System.IO;
-using System.Linq;
-using System.Globalization;
-using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using PKHeX.Core;
 using PKHeX.Core.AutoMod;
 
 namespace SysBot.Pokemon
 {
-    public class TradeExtras<T> where T : PKM, new()
+    public class TradeHelpers<T> where T : PKM, new()
     {
         private static readonly object _syncLog = new();
         public static ulong CoordinatesOffset = 0;
@@ -292,7 +287,7 @@ namespace SysBot.Pokemon
         {
             var pkMet = (T)pkm.Clone();
             if (pkMet.Version is not (int)GameVersion.GO)
-                pkMet.MetDate = DateOnly.Parse("2022/11/22");
+                pkMet.MetDate = DateOnly.Parse("2022/10/20");
 
             var analysis = new LegalityAnalysis(pkMet);
             var pkTrash = (T)pkMet.Clone();
