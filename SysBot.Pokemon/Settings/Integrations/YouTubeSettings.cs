@@ -23,7 +23,7 @@ namespace SysBot.Pokemon
         public string ChannelID { get; set; } = string.Empty;
 
         [Category(Startup), Description("Bot Command Prefix")]
-        public char CommandPrefix { get; set; } = '$';
+        public char CommandPrefix { get; set; } = '!';
 
         [Category(Operation), Description("Message sent when the Barrier is released.")]
         public string MessageStart { get; set; } = string.Empty;
