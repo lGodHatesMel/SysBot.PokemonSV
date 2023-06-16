@@ -17,7 +17,16 @@ namespace SysBot.Pokemon
         public string Token { get; set; } = string.Empty;
 
         [Category(Startup), Description("Bot command prefix.")]
-        public string CommandPrefix { get; set; } = "$";
+        public string CommandPrefix { get; set; } = "!";
+
+         [Category(Operation), Description("Stream link")]
+        public string StreamLink { get; set; } = string.Empty;
+
+        [Category(Operation), Description("Donation link")]
+        public string DonationLink { get; set; } = string.Empty;
+
+        [Category(Operation), Description("Team Builder link")]
+        public string TeamBuilderLink { get; set; } = string.Empty;
 
         [Category(Startup), Description("List of modules that will not be loaded when the bot is started (comma separated).")]
         public string ModuleBlacklist { get; set; } = string.Empty;

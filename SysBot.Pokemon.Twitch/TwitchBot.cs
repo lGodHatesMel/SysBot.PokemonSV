@@ -242,6 +242,10 @@ namespace SysBot.Pokemon.Twitch
             switch (c)
             {
                 // User Usable Commands
+                case "donate":
+                    return  Settings.DonationLink.Length > 0 ? $"Here's the donation link! Thank you for your support {Settings.DonationLink}" : string.Empty;
+                case "discord":
+                    return Settings.DiscordLink.Length > 0 ? $"Here's the Discord Server Link {Settings.DiscordLink}" : string.Empty;
                 case "trade":
                 case CommandAddition + "trade":
                 case "trade" + CommandAddition:
