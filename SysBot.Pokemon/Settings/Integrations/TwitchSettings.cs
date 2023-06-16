@@ -23,19 +23,10 @@ namespace SysBot.Pokemon
         public string Channel { get; set; } = string.Empty;
 
         [Category(Startup), Description("Bot Command Prefix")]
-        public char CommandPrefix { get; set; } = '!';
+        public char CommandPrefix { get; set; } = '$';
 
         [Category(Operation), Description("Message sent when the Barrier is released.")]
         public string MessageStart { get; set; } = string.Empty;
-        
-        [Category(Operation), Description("Discord Server Link")]
-        public string DiscordLink { get; set; } = string.Empty;
-
-        [Category(Operation), Description("Donation Link.")]
-        public string DonationLink { get; set; } = string.Empty;
-
-        [Category(Operation), Description("Team Builder link")]
-        public string TeamBuilderLink { get; set; } = string.Empty;
 
         // Messaging
 

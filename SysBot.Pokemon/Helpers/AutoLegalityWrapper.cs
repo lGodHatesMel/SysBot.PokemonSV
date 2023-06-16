@@ -1,9 +1,10 @@
-﻿using PKHeX.Core;
+﻿using System;
+using PKHeX.Core;
 using PKHeX.Core.AutoMod;
-using System;
 using System.IO;
-using System.Linq;
 using System.Threading;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace SysBot.Pokemon
 {
@@ -28,9 +29,6 @@ namespace SysBot.Pokemon
             InitializeSettings(cfg);
         }
 
-        // The list of encounter types in the priority we prefer if no order is specified.
-        private static readonly EncounterTypeGroup[] EncounterPriority = { EncounterTypeGroup.Egg, EncounterTypeGroup.Slot, EncounterTypeGroup.Static, EncounterTypeGroup.Mystery, EncounterTypeGroup.Trade };
-
         private static void InitializeSettings(LegalitySettings cfg)
         {
             APILegality.SetAllLegalRibbons = cfg.SetAllLegalRibbons;
@@ -40,24 +38,13 @@ namespace SysBot.Pokemon
             Legalizer.EnableEasterEggs = cfg.EnableEasterEggs;
             APILegality.AllowTrainerOverride = cfg.AllowTrainerDataOverride;
             APILegality.AllowBatchCommands = cfg.AllowBatchCommands;
-            APILegality.PrioritizeGame = cfg.PrioritizeGame;
-            APILegality.PrioritizeGameVersion = cfg.PrioritizeGameVersion;
-            APILegality.SetBattleVersion = cfg.SetBattleVersion;
             APILegality.Timeout = cfg.Timeout;
-
-            // We need all the encounter types present, so add the missing ones at the end.
-            var missing = EncounterPriority.Except(cfg.PrioritizeEncounters);
-            cfg.PrioritizeEncounters.AddRange(missing);
-            cfg.PrioritizeEncounters = cfg.PrioritizeEncounters.Distinct().ToList(); // Don't allow duplicates.
-            EncounterMovesetGenerator.PriorityList = cfg.PrioritizeEncounters;
         }
 
         private static void InitializeTrainerDatabase(LegalitySettings cfg)
         {
             // Seed the Trainer Database with enough fake save files so that we return a generation sensitive format when needed.
             string OT = cfg.GenerateOT;
-            if (OT.Length == 0)
-                OT = "Blank"; // Will fail if actually left blank.
             ushort TID = cfg.GenerateTID16;
             ushort SID = cfg.GenerateSID16;
             int lang = (int)cfg.GenerateLanguage;
@@ -77,13 +64,15 @@ namespace SysBot.Pokemon
                         TID16 = TID,
                         SID16 = SID,
                         OT = OT,
-                        Generation = i,
                     };
                     var exist = TrainerSettings.GetSavedTrainerData(v, i, fallback);
                     if (exist is SimpleTrainerInfo) // not anything from files; this assumes ALM returns SimpleTrainerInfo for non-user-provided fake templates.
                         TrainerSettings.Register(fallback);
                 }
             }
+
+            var trainer = TrainerSettings.GetSavedTrainerData(PKX.Generation, (GameVersion)0);
+            RecentTrainerCache.SetRecentTrainer(trainer);
         }
 
         private static void InitializeCoreStrings()
@@ -131,7 +120,7 @@ namespace SysBot.Pokemon
             throw new ArgumentException("Type does not have a recognized trainer fetch.", typeof(T).Name);
         }
 
-        public static ITrainerInfo GetTrainerInfo(int gen) => TrainerSettings.GetSavedTrainerData(gen);
+        public static ITrainerInfo GetTrainerInfo(int gen) => TrainerSettings.GetSavedTrainerData(gen, (GameVersion)0);
 
         public static PKM GetLegal(this ITrainerInfo sav, IBattleTemplate set, out string res)
         {

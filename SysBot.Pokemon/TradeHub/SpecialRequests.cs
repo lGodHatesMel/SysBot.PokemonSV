@@ -361,11 +361,10 @@ namespace SysBot.Pokemon
             return toRet;
         }
 
-        private static MysteryGift? LoadWC(byte[] data, string suffix = "wc9")
+        private static MysteryGift? LoadWC(byte[] data, string suffix = "wc8")
         {
             return suffix switch
             {
-                "wc9" => new WC9(data),
                 "wc8" => new WC8(data),
                 "wc7" => new WC7(data),
                 "wc6" => new WC6(data),
