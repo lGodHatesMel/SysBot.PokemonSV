@@ -143,7 +143,7 @@ namespace SysBot.Pokemon
                 _ => 60002, //PK8
             };
 
-            pk.MetDate = DateOnly.Parse("2023/04/20");
+            pk.MetDate = DateOnly.Parse("2023/06/05");
             pk.EggMetDate = pk.MetDate;
             pk.HeldItem = 0;
             pk.CurrentLevel = 1;
