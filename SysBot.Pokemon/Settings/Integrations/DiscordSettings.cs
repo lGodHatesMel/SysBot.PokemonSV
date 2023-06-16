@@ -41,7 +41,7 @@ namespace SysBot.Pokemon
         public string DonationLink { get; set; } = string.Empty;
 
         [Category(Operation), Description("Team Builder link")]
-        public string TeamBuildeLink { get; set; } = string.Empty;
+        public string TeamBuilderLink { get; set; } = string.Empty;
 
         // Whitelists
 
